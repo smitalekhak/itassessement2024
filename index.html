@@ -1,0 +1,57 @@
+<html lang = 'en'>
+<head> 
+<title> Welcome to my art gallery ! </title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ozeio</h1>
+        <nav class="navbar">
+            <a href="index.html">About Us</a>
+            <a href="gallery.html">Collections</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+    <div class="banner">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="slides">
+            <div class="slide">
+                <img src="image5.jpeg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="n.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="aa.jpg" alt="Slide 3">
+            </div>
+        </div>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+<footer>
+    <h3>Ozeio Art Gallery</h3>
+    <p>Welcome to Ozeio Gallery, located at Thapathali. We showcase a range of contemporary art from both local and international artists.</p>
+    <p>
+         2024 Ozeio Gallery | Contact Us: 2930849/382438240 | Please visit us at Thapathali, थापाथली, Kathmandu 44600
+    </p>
+</footer>
+<script>
+    let slideIndex = 0;
+    showSlides(slideIndex);
+
+    function changeSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slide");
+        if (n >= slides.length) {slideIndex = 0} 
+        if (n < 0) {slideIndex = slides.length - 1}
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slides[slideIndex].style.display = "block";  
+    }
+</script>
+</body>
