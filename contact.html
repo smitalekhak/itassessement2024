@@ -1,0 +1,116 @@
+<html>
+<head>
+    <title> Contact </title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <header>
+        <h1>ozeio</h1>
+        <nav class="navbar">
+            <a href="index.html">Homepage</a>
+            <a href="gallery.html">Collections</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+    <table>
+    <tr> <th colspan="2">Contact Information</th> </tr>
+    <tr>
+        <td rowspan="3">Address</td>
+        <td>Thapathali, थापाथली</td>
+    </tr>
+    <tr>
+        <td>Kathmandu 44600</td>
+    </tr>
+    <tr>
+        <td>Nepal</td>
+    </tr>
+    <tr>
+        <td>Phone</td>
+        <td>2930849 / 382438240</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>info@ozeiogallery.com</td>
+    </tr>
+    <tr>
+        <td>Opening Hours</td>
+        <td>Mon-Fri: 10 AM - 6 PM</td>
+    </tr>
+    </table>
+    <div class="formthing">
+    <h2>Send us a message!</h2>
+    <div class="msgdiv">
+      <form action="" name="contact" class="form-input" method="POST">
+        <div class="email">
+          <label for="email">Enter your email</label>
+          <input type="email" name="email" required >
+        </div>
+        <div class="msg_box">
+          <label for="message">What do you wanna say?</label>
+          <div class="area">
+            <textarea
+              name="msg"
+              id="msg-box"
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <div class="submit">
+          <button id="submit-button" onclick="alert(`Form submitted`)">
+            Submit
+          </button>
+          <button id="reset-button">Reset</button>
+        </div>
+      </form>
+    </div>
+    <div class="medias">
+      <ul>
+        <li>
+          <a href="https://facebook.com" target="_blank">Facebook</a>
+        </li>
+        <li>
+          <a href="https://instagram.com" target="_blank">Instagram</a>
+        </li>
+        <li>
+          <a href="https://tiktok.com" target="_blank">Tiktok</a>
+        </li>
+        <li>
+          <a href="https://youtube.com" target="_blank">Youtube</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+
+    <footer>
+        <h3>Ozeio Art Gallery</h3>
+        <p>Welcome to Ozeio Gallery, located at Thapathali. We showcase a range of contemporary art from both local and international artists.</p>
+        <p>
+             2024 Ozeio Gallery | Contact Us: 2930849/382438240 | Please visit us at Thapathali, थापाथली, Kathmandu 44600
+        </p>
+    </footer>
+    <script>
+      const resetButton = document.querySelector("#reset-button");
+      const submitButton = document.querySelector("#submit-button");
+      const inputs = document.querySelectorAll("input");
+      const txtArea = document.querySelector("textarea");
+
+      resetButton.addEventListener("click", () => {
+      if (confirm("Are you sure you want to reset")) {
+    // set the value attribute
+      inputs.forEach((input) => {
+      input.value = "";
+    });
+      txtArea.value = "";
+      resetButton.setAttribute("value", "Reset");
+      resetButton.setAttribute("type", "reset");
+
+    // do not clear the submit button
+      submitButton.value = "Submit";
+    }
+    });
+    </script>
+</body>
